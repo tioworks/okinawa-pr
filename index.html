@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>沖縄の広報相談室｜沖縄県内の中小企業・小規模事業者の広報・PR支援</title>
+  <meta name="description" content="沖縄県内の中小企業・小規模事業者のためのオンライン広報・PR支援。プレスリリース作成、PR TIMES配信、沖縄県内外のメディアへのPR、広報ネタの相談、広報の基礎まで伴走します。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#0a8f9c">
+  <link rel="canonical" href="https://YOUR-DOMAIN.example/">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="沖縄の広報相談室｜沖縄県内の中小企業・小規模事業者の広報・PR支援">
+  <meta property="og:description" content="いい商品を、もっと多くの人に知ってもらう。沖縄県内の中小企業・小規模事業者のためのオンライン広報・PRサポート。">
+  <meta property="og:url" content="https://YOUR-DOMAIN.example/">
+  <meta property="og:image" content="https://YOUR-DOMAIN.example/assets/okinawa-pr-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="沖縄の広報相談室｜沖縄県内の広報・PR支援">
+  <meta name="twitter:description" content="プレスリリース作成からPR TIMES配信、メディアへのPR、広報相談まで。">
+  <meta name="twitter:image" content="https://YOUR-DOMAIN.example/assets/okinawa-pr-logo.png">
+
+  <style>
+    :root{
+      --ink:#2f3d3f;
+      --muted:#687779;
+      --paper:#fffdf8;
+      --paper-2:#f7f4eb;
+      --teal:#0795a2;
+      --teal-dark:#08757e;
+      --aqua:#dff6f2;
+      --coral:#f06f61;
+      --yellow:#f4c95d;
+      --brown:#76533d;
+      --line:#dfe7e3;
+      --shadow:0 18px 50px rgba(39,66,68,.10);
+      --radius:24px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--paper);
+      font-family:"メイリオ", Meiryo, sans-serif;
+      line-height:1.8;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    img{max-width:100%;height:auto}
+    a{color:inherit}
+    button,input,textarea,select{font:inherit}
+    :focus-visible{outline:3px solid rgba(7,149,162,.35);outline-offset:3px}
+    .container{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
+    .skip{position:absolute;left:-9999px}
+    .skip:focus{left:12px;top:12px;background:#fff;padding:10px 14px;z-index:9999;border-radius:10px}
+
+    /* Okinawa motif: restrained minsa + hana-block */
+    .minsa{
+      background-image:linear-gradient(90deg,rgba(7,149,162,.10) 50%,transparent 50%);
+      background-size:28px 14px;
+      position:relative;
+    }
+    .minsa::after{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(90deg,transparent 0 25%,rgba(7,149,162,.07) 25% 50%,transparent 50% 75%,rgba(7,149,162,.07) 75%);
+      background-size:56px 14px;
+      pointer-events:none;
+    }
+    .hana-block{
+      position:relative;
+      overflow:hidden;
+    }
+    .hana-block::before{
+      content:"";
+      position:absolute;inset:0;
+      opacity:.34;
+      background:
+        linear-gradient(45deg,transparent 43%,rgba(7,149,162,.12) 44% 56%,transparent 57%) 0 0/42px 42px,
+        linear-gradient(-45deg,transparent 43%,rgba(7,149,162,.12) 44% 56%,transparent 57%) 21px 21px/42px 42px;
+      pointer-events:none;
+    }
+
+    .topbar{
+      background:#fff;
+      border-bottom:1px solid var(--line);
+      font-size:12px;
+      color:var(--muted);
+    }
+    .topbar .container{display:flex;justify-content:space-between;gap:16px;padding:7px 0}
+    header{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(255,253,248,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(223,231,227,.9);
+    }
+    .nav{
+      min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px
+    }
+    .brand{display:flex;align-items:center;text-decoration:none}
+    .brand img{width:205px;max-height:58px;object-fit:contain}
+    .navlinks{display:flex;align-items:center;gap:24px;font-size:14px}
+    .navlinks a{text-decoration:none;color:var(--muted)}
+    .navlinks a:hover{color:var(--teal-dark)}
+    .navcta{
+      text-decoration:none;background:var(--teal);color:#fff!important;
+      padding:10px 16px;border-radius:999px;font-weight:700;
+      box-shadow:0 8px 20px rgba(7,149,162,.18)
+    }
+
+    .hero{
+      position:relative;overflow:hidden;
+      padding:72px 0 76px;
+      background:
+        radial-gradient(circle at 88% 14%,rgba(244,201,93,.30),transparent 22%),
+        radial-gradient(circle at 10% 80%,rgba(240,111,97,.12),transparent 24%),
+        linear-gradient(180deg,#fffdf8 0%,#f4fbf7 100%);
+    }
+    .hero::after{
+      content:"";position:absolute;right:-100px;bottom:-150px;width:420px;height:420px;border-radius:50%;
+      border:70px solid rgba(7,149,162,.06);pointer-events:none
+    }
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      color:var(--teal-dark);font-size:13px;font-weight:800;letter-spacing:.08em;
+      background:var(--aqua);padding:7px 12px;border-radius:999px
+    }
+    .eyebrow::before{content:"";width:7px;height:7px;background:var(--coral);border-radius:50%}
+    h1{font-size:clamp(38px,5vw,64px);line-height:1.18;letter-spacing:-.045em;margin:20px 0}
+    h1 span{display:block}
+    .hero-lead{font-size:18px;color:var(--muted);max-width:650px}
+    .hero-definition{
+      margin:22px 0 0;padding:18px 20px;background:#fff;border:1px solid var(--line);
+      border-left:5px solid var(--teal);border-radius:16px;box-shadow:0 10px 28px rgba(39,66,68,.06);
+      font-size:15px
+    }
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;
+      border-radius:999px;text-decoration:none;font-weight:800;border:1px solid transparent;
+      transition:.2s ease;cursor:pointer
+    }
+    .btn-primary{background:var(--teal);color:#fff;box-shadow:0 12px 26px rgba(7,149,162,.20)}
+    .btn-primary:hover{transform:translateY(-2px);background:var(--teal-dark)}
+    .btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+    .btn-ghost:hover{border-color:var(--teal);color:var(--teal-dark)}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;color:var(--muted);font-size:13px}
+    .hero-trust span{padding:5px 10px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+    .hero-logo{
+      background:rgba(255,255,255,.68);border:1px solid rgba(255,255,255,.95);
+      border-radius:32px;padding:16px;box-shadow:var(--shadow);transform:rotate(1deg)
+    }
+    .hero-logo img{display:block;width:100%;border-radius:22px}
+
+    section{padding:92px 0}
+    .section-kicker{font-size:18px;font-weight:900;color:var(--teal);letter-spacing:.14em;text-transform:uppercase}
+    .section-title{font-size:clamp(28px,3.4vw,44px);line-height:1.35;letter-spacing:-.03em;margin:8px 0 14px}
+    .section-lead{color:var(--muted);max-width:720px;margin:0}
+    .center{text-align:center}
+    .center .section-lead{margin-inline:auto}
+
+    .pain{background:#fff}
+    .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+    .pain-card{
+      padding:22px 22px 24px;background:var(--paper);border:1px solid var(--line);border-radius:18px;
+      position:relative;overflow:hidden
+    }
+    .pain-card::before{content:"“";position:absolute;right:12px;top:-20px;font:900 110px/1 Georgia;color:rgba(240,111,97,.10)}
+    .pain-card p{margin:0;font-weight:700;position:relative}
+
+    .services{background:var(--paper-2)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+    .service{
+      background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 8px 26px rgba(39,66,68,.05)
+    }
+    .service-num{display:inline-flex;width:38px;height:38px;border-radius:12px;align-items:center;justify-content:center;background:var(--aqua);color:var(--teal-dark);font-weight:900}
+    .service h3{font-size:20px;margin:18px 0 8px}
+    .service p{color:var(--muted);font-size:14px;margin:0}
+    .service ul{padding-left:1.1em;margin:14px 0 0;color:var(--muted);font-size:13px}
+
+    .reasons{background:#fff}
+    .reason-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}
+    .reason{padding:24px;background:#fbfcf9;border-radius:20px;border-top:4px solid var(--yellow)}
+    .reason:nth-child(2){border-top-color:var(--teal)}
+    .reason:nth-child(3){border-top-color:var(--coral)}
+    .reason:nth-child(4){border-top-color:var(--brown)}
+    .reason .num{font-size:18px;color:var(--muted);font-weight:900}
+    .reason h3{font-size:18px;line-height:1.45;margin:10px 0}
+    .reason p{font-size:13px;color:var(--muted);margin:0}
+
+    .profile{background:linear-gradient(180deg,#f4fbf7,#fffdf8)}
+    .profile-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:56px;align-items:center}
+    .profile-photo{
+      position:relative;padding:14px;background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)
+    }
+    .profile-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px}
+    .profile-badge{
+      position:absolute;left:-14px;bottom:24px;background:var(--coral);color:#fff;padding:12px 16px;border-radius:14px;
+      font-size:12px;font-weight:800;box-shadow:0 10px 22px rgba(240,111,97,.22)
+    }
+    .career{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+    .career div{padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:16px}
+    .career strong{display:block;font-size:26px;color:var(--teal-dark);line-height:1.2}
+    .career span{font-size:12px;color:var(--muted)}
+    .profile-copy p{color:var(--muted)}
+
+    .flow{background:var(--paper-2)}
+    .flow-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:40px}
+    .step{position:relative;text-align:center}
+    .step::after{content:"→";position:absolute;right:-12px;top:32px;color:var(--teal);font-weight:900}
+    .step:last-child::after{display:none}
+    .step-icon{width:58px;height:58px;border-radius:18px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;margin:0 auto 12px;font-weight:900;color:var(--teal-dark)}
+    .step h3{font-size:14px;margin:0 0 4px}
+    .step p{font-size:12px;color:var(--muted);margin:0}
+
+    .search-content{background:#fff}
+    .content-box{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+    .mini-article{background:var(--paper-2);border-radius:20px;padding:24px;border:1px solid var(--line)}
+    .mini-article h3{margin:0 0 8px;font-size:19px}
+    .mini-article p{margin:0;color:var(--muted);font-size:14px}
+    .article-links{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+    .article-links span{font-size:12px;padding:7px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--muted)}
+
+    .faq{background:var(--paper-2)}
+    .faq-list{max-width:900px;margin:36px auto 0}
+    details{background:#fff;border:1px solid var(--line);border-radius:16px;margin:10px 0;overflow:hidden}
+    summary{cursor:pointer;list-style:none;padding:19px 22px;font-weight:800;position:relative;padding-right:52px}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"＋";position:absolute;right:20px;top:16px;color:var(--teal);font-size:22px}
+    details[open] summary::after{content:"−"}
+    details p{padding:0 22px 20px;margin:0;color:var(--muted);font-size:14px}
+
+    .contact{background:linear-gradient(135deg,#0b8f99,#08757e);color:#fff;position:relative;overflow:hidden}
+    .contact::before{content:"";position:absolute;width:500px;height:500px;border:80px solid rgba(255,255,255,.06);border-radius:50%;right:-180px;top:-180px}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start;position:relative}
+    .contact .section-kicker,.contact .section-lead{color:rgba(255,255,255,.76)}
+    .contact .section-title{color:#fff}
+    .contact-note{font-size:13px;color:rgba(255,255,255,.78)}
+    form{background:#fff;color:var(--ink);padding:26px;border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,.14)}
+    .field{margin-bottom:15px}
+    label{display:block;font-size:13px;font-weight:800;margin-bottom:6px}
+    .req{color:var(--coral);font-size:11px;margin-left:4px}
+    input,textarea,select{
+      width:100%;border:1px solid #d7e0dc;border-radius:12px;padding:12px 13px;background:#fbfdfc;color:var(--ink);
+      min-height:46px
+    }
+    textarea{min-height:130px;resize:vertical}
+    .check{display:flex;gap:9px;align-items:flex-start;font-size:12px;color:var(--muted)}
+    .check input{width:18px;min-height:18px;margin-top:2px}
+    .form-submit{width:100%;border:0;margin-top:6px}
+    .form-privacy-note{margin:8px 0 14px;color:rgba(255,255,255,.82);font-size:13px;line-height:1.7}
+    .form-help{font-size:11px;color:var(--muted);margin:9px 0 0}
+    .honeypot{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+
+    footer{background:#20383a;color:#d9e4e1;padding:28px 0 92px}
+    .footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center}
+    .footer-brand{font-weight:900;color:#fff}
+    .footer-small{font-size:11px;color:#a9b8b6}
+    .privacy{margin-top:22px;font-size:11px;color:#a9b8b6;max-width:820px}
+    .mobile-cta{display:none}
+
+    @media (max-width:900px){
+      .navlinks a:not(.navcta){display:none}
+      .hero-grid,.profile-grid,.contact-grid{grid-template-columns:1fr}
+      .hero{padding-top:46px}
+      .hero-logo{max-width:620px;margin:auto}
+      .pain-grid,.service-grid{grid-template-columns:repeat(2,1fr)}
+      .reason-grid{grid-template-columns:repeat(2,1fr)}
+      .flow-grid{grid-template-columns:repeat(3,1fr);row-gap:30px}
+      .step:nth-child(3)::after,.step:nth-child(6)::after{display:none}
+      .content-box{grid-template-columns:1fr}
+      .profile-photo{max-width:520px;margin:auto}
+    }
+    @media (max-width:640px){
+      .container{width:min(calc(100% - 28px),var(--max))}
+      .topbar .container{font-size:10px}
+      .topbar .container span:last-child{display:none}
+      .nav{min-height:66px}
+      .brand img{width:150px;max-height:50px}
+      .navcta{padding:9px 13px;font-size:12px}
+      .hero{padding:38px 0 52px}
+      h1{font-size:38px}
+      .hero-lead{font-size:16px}
+      .hero-definition{font-size:14px}
+      section{padding:68px 0}
+      .pain-grid,.service-grid,.reason-grid{grid-template-columns:1fr}
+      .flow-grid{grid-template-columns:repeat(2,1fr)}
+      .step:nth-child(3)::after{display:block}
+      .step:nth-child(even)::after{display:none}
+      .career{grid-template-columns:1fr 1fr}
+      .career strong{font-size:22px}
+      .contact-grid{gap:24px}
+      form{padding:20px}
+      .footer-row{align-items:flex-start;flex-direction:column}
+      .mobile-cta{
+        display:flex;position:fixed;left:0;right:0;bottom:0;z-index:1200;
+        padding:10px 12px;background:rgba(255,253,248,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line)
+      }
+      .mobile-cta .btn{width:100%;min-height:48px}
+      footer{padding-bottom:84px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition:none!important}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://YOUR-DOMAIN.example/#website",
+        "url":"https://YOUR-DOMAIN.example/",
+        "name":"沖縄の広報相談室",
+        "inLanguage":"ja-JP",
+        "description":"沖縄県内の中小企業・小規模事業者向けオンライン広報・PR支援サービス"
+      },
+      {
+        "@type":"Organization",
+        "@id":"https://YOUR-DOMAIN.example/#organization",
+        "name":"TIO WORKS",
+        "url":"https://YOUR-DOMAIN.example/",
+        "logo":"https://YOUR-DOMAIN.example/assets/okinawa-pr-logo.png",
+        "areaServed":{"@type":"AdministrativeArea","name":"沖縄県"},
+        "description":"沖縄県内の中小企業・小規模事業者を対象に、プレスリリース作成、PR TIMES配信、メディアPR、広報相談などをオンラインで支援します。"
+      },
+      {
+        "@type":"Person",
+        "@id":"https://YOUR-DOMAIN.example/#person",
+        "name":"YOUR NAME",
+        "worksFor":{"@id":"https://YOUR-DOMAIN.example/#organization"},
+        "jobTitle":"広報・PR支援",
+        "description":"生活情報メディアで10年、企業広報、大手家電メーカーの広報、企業の広報支援で10年の経験を持つ広報パーソン。"
+      },
+      {
+        "@type":"Service",
+        "@id":"https://YOUR-DOMAIN.example/#service",
+        "name":"沖縄の広報相談室",
+        "serviceType":"広報・PR支援",
+        "provider":{"@id":"https://YOUR-DOMAIN.example/#organization"},
+        "areaServed":{"@type":"AdministrativeArea","name":"沖縄県"},
+        "audience":{"@type":"BusinessAudience","name":"沖縄県内の中小企業・小規模事業者"},
+        "description":"プレスリリース作成、PR TIMES配信サポート、沖縄県内外のメディアへのPR、広報ネタの相談、広報の基礎を学ぶ支援をオンラインで提供します。"
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://YOUR-DOMAIN.example/#faq",
+        "mainEntity":[
+          {"@type":"Question","name":"プレスリリースだけお願いできますか？","acceptedAnswer":{"@type":"Answer","text":"はい。情報整理からタイトル、構成、本文、素材の見せ方まで、必要な範囲でプレスリリース作成を支援します。"}},
+          {"@type":"Question","name":"PR TIMESへの配信も相談できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。PR TIMESでの配信方法、原稿準備、配信内容、タイミング、配信後の活用について相談できます。PR TIMESの利用料金や契約条件は公式情報をご確認ください。"}},
+          {"@type":"Question","name":"PR TIMESを使ったことがありません。","acceptedAnswer":{"@type":"Answer","text":"大丈夫です。初めての方にも、何を準備し、どのような順番で進めればよいかをわかりやすく説明します。"}},
+          {"@type":"Question","name":"沖縄県内のメディアに情報を届けてもらえますか？","acceptedAnswer":{"@type":"Answer","text":"はい。沖縄県内のテレビ、ラジオ、新聞、Webメディア、地域情報メディアなど、情報の内容に応じた届け方を一緒に考えます。掲載や放送を保証するサービスではありません。"}},
+          {"@type":"Question","name":"沖縄県外のメディアにもPRできますか？","acceptedAnswer":{"@type":"Answer","text":"はい。沖縄という地域性や事業の特徴を整理し、全国メディアや専門メディアなど、届けたい相手に合わせたPR方法を相談できます。"}},
+          {"@type":"Question","name":"どんな情報ならプレスリリースになりますか？","acceptedAnswer":{"@type":"Answer","text":"新商品、新サービス、新店舗、イベント、地域との取り組み、新しい技術、コラボレーション、周年、新しい挑戦などが考えられます。大切なのは、事業者側の『言いたいこと』だけでなく、社会や生活者にとっての新しさ・意味を整理することです。"}},
+          {"@type":"Question","name":"新商品がないのですが相談できますか？","acceptedAnswer":{"@type":"Answer","text":"もちろんです。商品以外にも、地域との取り組み、採用、働き方、イベント、企業の挑戦など、広報につながるテーマを一緒に探します。"}},
+          {"@type":"Question","name":"小さな会社でも利用できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。広報担当者を置くほどではない中小企業・小規模事業者、個人事業主の方も対象です。"}},
+          {"@type":"Question","name":"個人事業主でも相談できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。個人事業主、店舗、地域事業者などもご相談いただけます。"}},
+          {"@type":"Question","name":"オンラインだけでも利用できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。オンラインを中心に、沖縄県内のどこからでも相談しやすい形で支援します。"}},
+          {"@type":"Question","name":"広報について何もわからなくても大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"大丈夫です。『広報って何？』『何を発信すればいい？』という段階から、専門用語をできるだけ使わずに一緒に整理します。"}},
+          {"@type":"Question","name":"まず相談だけすることはできますか？","acceptedAnswer":{"@type":"Answer","text":"はい。まずは現在の取り組みやお悩みをお聞かせください。具体的な支援内容は、その後に一緒に考えます。"}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<div class="topbar">
+  <div class="container">
+    <span>沖縄県内の中小企業・小規模事業者向け</span>
+    <span>オンライン中心の広報・PRサポート</span>
+  </div>
+</div>
+
+<header>
+  <nav class="container nav" aria-label="メインナビゲーション">
+    <a class="brand" href="#top" aria-label="沖縄の広報相談室 ホーム">
+      <img src="assets/okinawa-pr-logo.webp" alt="沖縄の広報相談室">
+    </a>
+    <div class="navlinks">
+      <a href="#service">できること</a>
+      <a href="#profile">プロフィール</a>
+      <a href="#faq">よくある質問</a>
+      <a class="navcta" href="#contact">相談する</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">OKINAWA × PR SUPPORT</span>
+        <h1><span>いい商品を、</span><span>もっと多くの人に</span><span>知ってもらう。</span></h1>
+        <p class="hero-lead">
+          沖縄県内の中小企業・小規模事業者のための、オンラインでの広報・PRサポート。
+          プレスリリース作成、PR TIMES配信、沖縄県内外のメディアへのPR、広報相談まで。
+        </p>
+        <p class="hero-definition">
+          <strong>沖縄の広報相談室</strong>は、沖縄県内の中小企業・小規模事業者向けに、
+          「何を発信すればいいか」から一緒に考え、広報の基礎から実務までオンラインで支援する広報パートナーです。
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">まずは広報について相談する</a>
+          <a class="btn btn-ghost" href="#service">できることを見る</a>
+        </div>
+        <div class="hero-trust" aria-label="対応内容">
+          <span>プレスリリース</span><span>PR TIMES</span><span>沖縄メディア</span><span>広報相談</span>
+        </div>
+      </div>
+      <div class="hero-logo">
+        <img src="assets/okinawa-pr-hero.png" alt="沖縄のお土産やグルメ、体験アクティビティ、プレスリリースやメディア発信をイメージしたイラスト" width="1536" height="1024" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <section class="pain" aria-labelledby="pain-title">
+    <div class="container">
+      <div class="center">
+        <div class="section-kicker">PROBLEM</div>
+        <h2 class="section-title" id="pain-title">こんなお悩み、ありませんか？</h2>
+        <p class="section-lead">「広報をやりたい」けれど、社内に経験者がいない。そんな事業者のための相談窓口です。</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card"><p>新商品を出したけど、どう発信すればいいかわからない。</p></div>
+        <div class="pain-card"><p>プレスリリースを書いてみたい。でも、何を書けばいい？</p></div>
+        <div class="pain-card"><p>PR TIMESで配信してみたいけれど、自分だけでは不安。</p></div>
+        <div class="pain-card"><p>沖縄のメディアに情報を届けたい。</p></div>
+        <div class="pain-card"><p>沖縄県外のメディアにも知ってもらいたい。</p></div>
+        <div class="pain-card"><p>そもそも、これは広報のネタになるの？</p></div>
+        <div class="pain-card"><p>広報担当者を雇うほどではないけれど、相談相手がほしい。</p></div>
+        <div class="pain-card"><p>SNSだけでなく、検索からも見つけてもらいたい。</p></div>
+        <div class="pain-card"><p>広報について基礎から学びたい。</p></div>
+      </div>
+      <div class="center" style="margin-top:30px"><strong>そんなときに、広報のプロに相談してください。</strong></div>
+    </div>
+  </section>
+
+  <section class="services" id="service" aria-labelledby="service-title">
+    <div class="container">
+      <div class="center">
+        <div class="section-kicker">SERVICE</div>
+        <h2 class="section-title" id="service-title">広報の「どうしよう？」を、<br>一緒に整理します。</h2>
+        <p class="section-lead">文章を書くことだけが広報ではありません。「何を」「誰に」「いつ」「どう伝えるか」から考えます。</p>
+      </div>
+      <div class="service-grid">
+        <article class="service"><span class="service-num">01</span><h3>プレスリリース作成支援</h3><p>情報整理から、ニュースになるポイントを見つけ、タイトル・見出し・本文まで一緒に組み立てます。</p><ul><li>ニュース性の発掘</li><li>構成・タイトル・本文</li><li>写真・素材のアドバイス</li><li>メディア視点でブラッシュアップ</li></ul></article>
+        <article class="service"><span class="service-num">02</span><h3>PR TIMES配信サポート</h3><p>初めてでも進められるよう、原稿準備から配信内容、タイミング、配信後の活用まで相談できます。</p><ul><li>配信方法の相談</li><li>原稿・素材の確認</li><li>配信タイミング</li><li>配信後の活用</li></ul></article>
+        <article class="service"><span class="service-num">03</span><h3>沖縄県内メディアへのPR</h3><p>テレビ、ラジオ、新聞、Web、地域情報メディアなど、情報に合った届け方を考えます。</p><ul><li>メディア選定の考え方</li><li>情報の切り口整理</li><li>届け方の相談</li><li>掲載・放送の保証はしません</li></ul></article>
+        <article class="service"><span class="service-num">04</span><h3>沖縄県外メディアへのPR</h3><p>沖縄だからこそニュースになる視点も含め、全国・専門メディアへの情報発信を考えます。</p><ul><li>地域性の整理</li><li>全国向けの切り口</li><li>専門メディアへのPR</li><li>企画・情報提供の相談</li></ul></article>
+        <article class="service"><span class="service-num">05</span><h3>広報ネタの相談</h3><p>「新商品がないから広報できない」と思っている方も。日々の事業の中から発信テーマを探します。</p><ul><li>新商品・新サービス</li><li>イベント・コラボ</li><li>地域との取り組み</li><li>新しい挑戦・周年など</li></ul></article>
+        <article class="service"><span class="service-num">06</span><h3>広報の基礎を学ぶ</h3><p>経営者・担当者向けに、広報とは何か、ニュースになる情報とは何かを実務目線でわかりやすく伝えます。</p><ul><li>広報の基本</li><li>プレスリリースの考え方</li><li>メディア視点</li><li>継続的な情報発信</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="reasons" aria-labelledby="reason-title">
+    <div class="container">
+      <div class="center">
+        <div class="section-kicker">VALUE</div>
+        <h2 class="section-title" id="reason-title">大切にしていること</h2>
+      </div>
+      <div class="reason-grid">
+        <article class="reason"><div class="num">01</div><h3>「何を書くか」から相談できる</h3><p>文章を作る前に、ニュースになるポイントを一緒に整理します。</p></article>
+        <article class="reason"><div class="num">02</div><h3>メディアと企業、両方の視点がある</h3><p>生活情報メディア10年、企業広報、大手家電メーカー広報、企業の広報支援10年の経験を活かします。</p></article>
+        <article class="reason"><div class="num">03</div><h3>オンラインだから沖縄県内どこからでも</h3><p>那覇だけでなく、沖縄県内各地域の事業者が相談しやすいオンライン中心の支援です。</p></article>
+        <article class="reason"><div class="num">04</div><h3>一度きりではなく、続ける広報へ</h3><p>必要に応じて、次の発信テーマや情報発信の進め方まで相談できます。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="profile hana-block" id="profile" aria-labelledby="profile-title">
+    <div class="container profile-grid">
+      <div class="profile-photo">
+        <img src="assets/profile.webp" alt="沖縄の広報相談室 運営者のプロフィール写真" width="1000" height="1250" loading="lazy">
+        <div class="profile-badge">TSUKASA OTA</div>
+      </div>
+      <div class="profile-copy">
+        <div class="section-kicker">PROFILE</div>
+        <h2 class="section-title" id="profile-title">メディアと企業、<br>両方の現場を知っているからこそ、<br>できる広報があります。</h2>
+        <p>地域情報メディアで10年間、情報を「届ける側」の現場を経験しました。</p>
+        <p>その中で企業のコーポレート広報を経て、大ヒット家電メーカーの広報・販促担当に。その後も中小企業の広報支援に10年間携わってきました。</p>
+        <p>メディアはどんな情報を取り上げたいのか。企業は何を伝えたいのか。その間をどうつなぐのか。</p>
+        <p>この両方の視点をもとに、沖縄の事業者が「伝えたいこと」を「届く情報」に変えていくお手伝いをします。</p>
+        <div class="career">
+          <div><strong>地域情報メディアで10年</strong><span>メディアの立場で地域情報を発信</span></div>
+          <div><strong>コーポレート広報</strong><span>企業の魅力や事業を社内外へ発信</span></div>
+          <div><strong>商品広報</strong><span>商品・サービスの価値をメディアを通し広くPR</span></div>
+          <div><strong>中小企業の広報支援を10年</strong><span>さまざまな業界・企業規模の広報業務を支援</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flow" aria-labelledby="flow-title">
+    <div class="container">
+      <div class="center">
+        <div class="section-kicker">FLOW</div>
+        <h2 class="section-title" id="flow-title">ご相談から、発信まで。</h2>
+        <p class="section-lead">最初から完璧なプレスリリースを用意する必要はありません。まず、今取り組んでいることを聞かせてください。</p>
+      </div>
+      <div class="flow-grid">
+        <div class="step"><div class="step-icon">01</div><h3>まず相談</h3><p>今のお悩みを聞きます。</p></div>
+        <div class="step"><div class="step-icon">02</div><h3>整理する</h3><p>伝えたいことを整理。</p></div>
+        <div class="step"><div class="step-icon">03</div><h3>方向性を考える</h3><p>誰に、どう届けるか。</p></div>
+        <div class="step"><div class="step-icon">04</div><h3>つくる</h3><p>原稿や素材を準備。</p></div>
+        <div class="step"><div class="step-icon">05</div><h3>発信する</h3><p>PR TIMES等で発信。</p></div>
+        <div class="step"><div class="step-icon">06</div><h3>次の広報へ</h3><p>次のテーマを考える。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="center">
+        <div class="section-kicker">FAQ</div>
+        <h2 class="section-title" id="faq-title">よくあるご質問</h2>
+        <p class="section-lead">「こんなことを聞いてもいいの？」という内容も、まずはお気軽にどうぞ。</p>
+      </div>
+      <div class="faq-list">
+        <details><summary>プレスリリースだけお願いできますか？</summary><p>はい。情報整理からタイトル、構成、本文、素材の見せ方まで、必要な範囲でプレスリリース作成を支援します。</p></details>
+        <details><summary>PR TIMESへの配信も相談できますか？</summary><p>はい。PR TIMESでの配信方法、原稿準備、配信内容、タイミング、配信後の活用について相談できます。PR TIMESの利用料金や契約条件は公式情報をご確認ください。</p></details>
+        <details><summary>PR TIMESを使ったことがありません。</summary><p>大丈夫です。初めての方にも、何を準備し、どのような順番で進めればよいかをわかりやすく説明します。</p></details>
+        <details><summary>沖縄県内のメディアに情報を届けてもらえますか？</summary><p>はい。沖縄県内のテレビ、ラジオ、新聞、Webメディア、地域情報メディアなど、情報の内容に応じた届け方を一緒に考えます。掲載や放送を保証するサービスではありません。</p></details>
+        <details><summary>沖縄県外のメディアにもPRできますか？</summary><p>はい。沖縄という地域性や事業の特徴を整理し、全国メディアや専門メディアなど、届けたい相手に合わせたPR方法を相談できます。</p></details>
+        <details><summary>どんな情報ならプレスリリースになりますか？</summary><p>新商品、新サービス、新店舗、イベント、地域との取り組み、新しい技術、コラボレーション、周年、新しい挑戦などが考えられます。大切なのは、事業者側の「言いたいこと」だけでなく、社会や生活者にとっての新しさ・意味を整理することです。</p></details>
+        <details><summary>新商品がないのですが相談できますか？</summary><p>もちろんです。商品以外にも、地域との取り組み、採用、働き方、イベント、企業の挑戦など、広報につながるテーマを一緒に探します。</p></details>
+        <details><summary>小さな会社でも利用できますか？</summary><p>はい。広報担当者を置くほどではない中小企業・小規模事業者、個人事業主の方も対象です。</p></details>
+        <details><summary>個人事業主でも相談できますか？</summary><p>はい。個人事業主、店舗、地域事業者などもご相談いただけます。</p></details>
+        <details><summary>オンラインだけでも利用できますか？</summary><p>はい。オンラインを中心に、沖縄県内のどこからでも相談しやすい形で支援します。</p></details>
+        <details><summary>広報について何もわからなくても大丈夫ですか？</summary><p>大丈夫です。「広報って何？」「何を発信すればいい？」という段階から、専門用語をできるだけ使わずに一緒に整理します。</p></details>
+        <details><summary>まず相談だけすることはできますか？</summary><p>はい。まずは現在の取り組みやお悩みをお聞かせください。具体的な支援内容は、その後に一緒に考えます。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-grid">
+      <div>
+        <div class="section-kicker">CONTACT</div>
+        <h2 class="section-title" id="contact-title">広報のこと、<br>まずは話してみませんか？</h2>
+        <p class="section-lead">「プレスリリースを書きたい」「何を発信すればいいかわからない」「広報担当者がいない」そんな段階でも大丈夫です。</p>
+        <p class="contact-note">今取り組んでいること、これから始めたいこと、困っていること。まとまっていなくても構いません。まずは聞かせてください。</p>
+      </div>
+
+      <form action="contact.php" method="post" accept-charset="UTF-8">
+        <div class="honeypot" aria-hidden="true">
+          <label>会社URL<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <div class="field"><label for="name">お名前<span class="req">必須</span></label><input id="name" name="name" type="text" required autocomplete="name"></div>
+        <div class="field"><label for="company">会社名・屋号</label><input id="company" name="company" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="email">メールアドレス<span class="req">必須</span></label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="phone">電話番号（任意）</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="support">希望する支援内容</label>
+          <select id="support" name="support">
+            <option value="">選択してください</option>
+            <option>プレスリリース作成支援</option>
+            <option>PR TIMES配信サポート</option>
+            <option>沖縄県内メディアへのPR</option>
+            <option>沖縄県外メディアへのPR</option>
+            <option>広報ネタ・発信内容の相談</option>
+            <option>広報の基礎を学びたい</option>
+            <option>その他・まだ決まっていない</option>
+          </select>
+        </div>
+        <div class="field"><label for="message">現在のお悩み・相談内容<span class="req">必須</span></label><textarea id="message" name="message" required placeholder="例：新商品を発売する予定ですが、プレスリリースにできるか相談したいです。"></textarea></div>
+        <p class="form-privacy-note">個人情報はお問い合わせへの対応、必要なご連絡のために利用します。</p>
+        <button class="btn btn-primary form-submit" type="submit">広報について相談する</button>
+        <p class="form-help">入力・送信いただいた個人情報はお問い合わせへの対応、必要なご連絡のために利用します。</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <div>
+        <div class="footer-brand">沖縄の広報相談室</div>
+        <div class="footer-small">沖縄県内の中小企業・小規模事業者向け 広報・PR支援</div>
+       <div class="footer-small"> <a href="../../mypage/tio-works/index.html" target="_blank">運営者：TIO WORKS</a></div>
+      </div>
+      <div class="footer-small">©TIO WORKS</div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a class="btn btn-primary" href="#contact">広報について相談する</a>
+</div>
+</body>
+</html>

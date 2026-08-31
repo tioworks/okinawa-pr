@@ -1,0 +1,16 @@
+公開前チェックリスト
+======================
+
+[ ] config.php の受信メールアドレスを変更
+[ ] config.php の送信元メールアドレスを変更
+[ ] index.html の YOUR-DOMAIN.example を変更
+[ ] index.html の YOUR NAME を変更
+[ ] robots.txt のドメインを変更
+[ ] sitemap.xml のドメインを変更
+[ ] 実際のプライバシーポリシーを追加
+[ ] 必要に応じて特商法表記を追加
+[ ] PHPフォーム送信テスト
+[ ] スマホ実機テスト
+[ ] PCブラウザテスト
+[ ] OGP表示確認
+[ ] Google Search Console登録
